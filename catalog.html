@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Каталог</title>
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
         <header class="header-main">
@@ -45,7 +45,7 @@
                     </li>
                     <li class="navigation-item">
                         <a class="navigation-link" href="#">
-                            <span class="visually-hidden">
+                            <span class="navigation-button">
                                 Хочу сюда!
                             </span>
                         </a>
@@ -149,10 +149,10 @@
                             <span class="visually-hidden">Изменить максимальную цену</span>
                         </button>
                         <label class="catalog-selection__label">
-                            <input class="catalog-selection__input" type="number" name="min-price">от
+                            <input class="catalog-selection__input" type="number" name="min-price" placeholder="0">от
                         </label>
                         <label class="catalog-selection__label">
-                            <input class="catalog-selection__input" type="number" name="max-price">до
+                            <input class="catalog-selection__input" type="number" name="max-price" placeholder="9000">до
                         </label>
                     </fieldset>
                     <button class="button-apply">
@@ -320,6 +320,9 @@
                         </a>
                     </li>
                 </ul>
+                <p class="hotel-summary">
+                    Гостиниц на странице:
+                </p>
                 <select class="select-number" id="number-view" name="number-view">
                     <option value="1">
                         1
