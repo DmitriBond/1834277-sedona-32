@@ -108,7 +108,7 @@ body {
 
 .advantages-list {
     display: flex;
-    justify-content: flex-start;
+    justify-content: stretch;
     flex-wrap: wrap;
     text-align: center;
     margin: 0;
@@ -143,6 +143,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 1200px;
 }
 
 .appointment-description {
@@ -172,6 +173,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 1200px;
 }
 
 .mailing-catalog {
