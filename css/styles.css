@@ -52,6 +52,10 @@ body {
     border-radius: 10px;
     text-decoration: none;
     text-transform: uppercase;
+    margin-bottom: 91px;
+    padding-top: 13px;
+    padding-bottom: 17px;
+    width: 575px;
 }
 
 .navigation-main {
@@ -247,6 +251,7 @@ h4.advantages-title {
     line-height: 120%;
     margin: 0;
 }
+
 h3.appointment-title {
     margin-top: 91px;
     margin-bottom: 15px;
@@ -254,6 +259,7 @@ h3.appointment-title {
 
 p.appointment-description {
     margin-bottom: 57px;
+    margin-top: 15px;
 }
 
 .appointment {
@@ -266,6 +272,8 @@ p.appointment-description {
 
 .appointment-description {
     text-align: center;
+    font-size: 22px;
+    line-height: 118%;
 }
 
 .button-submit {
@@ -279,7 +287,6 @@ p.appointment-description {
     border-radius: 0 10px 10px 0;
     text-decoration: none;
     text-transform: uppercase;
-
 }
 
 .mailing {
@@ -292,6 +299,14 @@ p.appointment-description {
     justify-content: center;
     align-items: center;
     width: 1200px;
+    margin: 0 auto;
+}
+
+.mailing-title {
+    margin-top: 94px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 120%;
 }
 
 .mailing-catalog {
@@ -303,6 +318,31 @@ p.appointment-description {
 
 .mailing-description {
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 46px;
+    font-size: 22px;
+    line-height: 118%;
+}
+
+.mailing-form {
+    font-display: flex;
+    justify-content: flex-start;
+    margin-bottom: 93px;
+}
+
+.mailing-form input {
+    width: 600px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.mailing-form button {
+    width: 200px;
+    height: 61px;
+    margin: 0;
+    padding: 0;
 }
 
 .appointment-description {
@@ -314,11 +354,33 @@ p.appointment-description {
     margin: 0 auto;
     width: 1200px;
     justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 .socials {
-    width: 107px;
-    margin-right: 61px;
+    max-width: 134px;
+    margin-left: 50px;
+}
+
+.socials-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.socials-item {
+    height: 40px;
+    width: 40px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+}
+
+.socials-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .contacts {
