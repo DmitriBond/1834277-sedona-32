@@ -53,7 +53,7 @@
                 </ul>
             </nav>
         </header>
-        <main class="main-catalog">
+        <main class=" main-container main-catalog">
             <div class="page-container">
                 <header class="main-header">
                     <h1 class="main-header__title">
@@ -164,44 +164,45 @@
                         </button>
                     </form>
                     <div class="catalog-column">
-                        <form class="sorting-form">
-                            <label class=" visually-hidden" for="sorting">
-                                Сортировка
-                            </label>
-                            <select class="select-control" id="sorting" name="sorting">
-                                <option value="cheap">
-                                    Сначала дешевые
-                                </option>
-                                <option value="expensive">
-                                    Сначала дорогие
-                                </option>
-                                <option value="popular">
-                                    Сначала популярные
-                                </option>
-                            </select>
-                            <button class="visually-hidden">
-                                Отсортировать гостиницы
-                            </button>
-                        </form>
-                        <!-- Ссылки для смены вида расположения гостиниц -->
-                        <a class="button-view button-table" href="#">
-                            <span class="visually-hidden">
-                                Показать таблицу
-                            </span>
-                        </a>
-                        <a class="button-view button-one" href="#">
-                            <span class="visually-hidden">
-                                Показать одну гостиницу
-                            </span>
-                        </a>
-                        <a class="button-view button-list" href="#">
-                            <span class="visually-hidden">
-                                Показать список
-                            </span>
-                        </a>
-                        <p class="hotel-number">
-                            НАЙДЕНО ГОСТИНИЦ: 38
-                        </p>
+                        <div class="sorting-container">
+                            <p class="hotel-number">
+                                НАЙДЕНО ГОСТИНИЦ: 38
+                            </p>
+                            <form class="sorting-form">
+                                <label class=" visually-hidden" for="sorting">
+                                    Сортировка
+                                </label>
+                                <select class="select-control" id="sorting" name="sorting">
+                                    <option value="cheap">
+                                        Сначала дешевые
+                                    </option>
+                                    <option value="expensive">
+                                        Сначала дорогие
+                                    </option>
+                                    <option value="popular">
+                                        Сначала популярные
+                                    </option>
+                                </select>
+                                <button class="visually-hidden">
+                                    Отсортировать гостиницы
+                                </button>
+                            </form>
+                            <a class="button-view button-table" href="#">
+                                <span class="visually-hidden">
+                                    Показать таблицу
+                                </span>
+                            </a>
+                            <a class="button-view button-one" href="#">
+                                <span class="visually-hidden">
+                                    Показать одну гостиницу
+                                </span>
+                            </a>
+                            <a class="button-view button-list" href="#">
+                                <span class="visually-hidden">
+                                    Показать список
+                                </span>
+                            </a>
+                        </div>
                         <!-- Разметка карточки гостиницы-->
                         <article class="hotel">
                             <img class="hotel__image" src="img/hotels/hotel-1.jpg" width="180" height="120" alt="Amara Resort & Spa">
@@ -290,58 +291,60 @@
                         <button class="button pagination-all" type="button">
                             ЗАГРУЗИТЬ ЕЩЕ
                         </button>
-                        <ul class="pagination">
-                            <li class="pagination__item">
-                                <a class="pagination__link pagination-current">
+                        <div class="pagination-container">
+                            <ul class="pagination">
+                                <li class="pagination__item">
+                                    <a class="pagination__link pagination-current">
+                                        1
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        4
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        ...
+                                    </a>
+                                </li>
+                                <li class="pagination__item">
+                                    <a class="pagination__link" href="#">
+                                        10
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="hotel-summary">
+                                Гостиниц на странице:
+                            </p>
+                            <select class="select-number" id="number-view" name="number-view">
+                                <option value="1">
                                     1
-                                </a>
-                            </li>
-                            <li class="pagination__item">
-                                <a class="pagination__link" href="#">
+                                </option>
+                                <option value="2">
                                     2
-                                </a>
-                            </li>
-                            <li class="pagination__item">
-                                <a class="pagination__link" href="#">
+                                </option>
+                                <option value="3">
                                     3
-                                </a>
-                            </li>
-                            <li class="pagination__item">
-                                <a class="pagination__link" href="#">
+                                </option>
+                                <option value="4" selected>
                                     4
-                                </a>
-                            </li>
-                            <li class="pagination__item">
-                                <a class="pagination__link" href="#">
-                                    ...
-                                </a>
-                            </li>
-                            <li class="pagination__item">
-                                <a class="pagination__link" href="#">
-                                    10
-                                </a>
-                            </li>
-                        </ul>
-                        <p class="hotel-summary">
-                            Гостиниц на странице:
-                        </p>
-                        <select class="select-number" id="number-view" name="number-view">
-                            <option value="1">
-                                1
-                            </option>
-                            <option value="2">
-                                2
-                            </option>
-                            <option value="3">
-                                3
-                            </option>
-                            <option value="4" selected>
-                                4
-                            </option>
-                        </select>
-                        <button class="visually-hidden">
-                            Выбрать количество гостиниц
-                        </button>
+                                </option>
+                            </select>
+                            <button class="visually-hidden">
+                                Выбрать количество гостиниц
+                            </button>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -376,12 +379,12 @@
                                 <img class="link-twitter" src="img/social-twitter.svg" width="18" height="15" alt="Twitter">
                             </a>
                         </li>
-                        <li>
+                        <li class="socials-item">
                             <a class="socials-link" href="https://www.facebook.com/htmlacademy">
                                 <img class="link-facebook" src="img/social-facebook.svg" width="10" height="18" alt="Facebook">
                             </a>
                         </li>
-                        <li>
+                        <li class="socials-item">
                             <a class="socials-link" href="https://www.youtube.comc/HTMLAcademyRUS">
                                 <img class="link-youtube" src="img/social-youtube.svg" width="20" height="16" alt="Youtube">
                             </a>
@@ -403,7 +406,7 @@
                         Разработчик
                     </h2>
                     <a class="developer-link" href="https://htmlacademy.ru/">
-                        <img class="developer-logo" src="#" alt="Логотип html academy">
+                        <img class="developer-logo" src="img/logo-htmlacademy.svg" width="115" height="33" alt="Логотип html academy">
                     </a>
                 </section>
             </div>

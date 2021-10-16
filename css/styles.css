@@ -174,6 +174,7 @@ body {
 
 .advantages-item:first-child {
     display: grid;
+    width: 1200px;
     grid-template-columns: 400px 800px;
     grid-template-areas:
         "title picture"
@@ -195,6 +196,32 @@ body {
 
 .grid-image {
     grid-area: picture;
+}
+
+.advantages-item:nth-child(5) {
+    display: grid;
+    width: 1200px;
+    grid-template-columns: 800px 400px;
+    grid-template-areas:
+        "picture-2 title-2"
+        "picture-2 number-2"
+        "picture-2 text-2";
+}
+
+.grid-title-2 {
+    grid-area: title-2;
+}
+
+.grid-number-2 {
+    grid-area: number-2;
+}
+
+.grid-text-2 {
+    grid-area: text-2;
+}
+
+.grid-image-2 {
+    grid-area: picture-2;
 }
 
 .advantages-item img {
@@ -220,6 +247,7 @@ body {
 
 .advantages-item {
     width: 400px;
+    height: 384px;
 }
 
 .advantages-title {
@@ -243,6 +271,14 @@ h4.advantages-title {
 .advantages-list li:nth-child(5) {
     background-color: #83B3D3;
     color: #FFFFFF;
+}
+
+.advantages-list li:nth-child(2n) {
+    background-color: #83B3D31F;
+}
+
+.advantages-list li:nth-child(7) {
+    background-color: #83B3D333;
 }
 
 .appointment-title {
@@ -314,6 +350,12 @@ p.appointment-description {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mailing-catalog .mailing-title {
+    margin-top: 0;
 }
 
 .mailing-description {
@@ -403,35 +445,92 @@ p.appointment-description {
     margin-right: 72px;
 }
 
-.main-header {
+.main-catalog {
     background-image: url("../img/catalog-background.jpg");
-    background-size: 100% auto;
     background-repeat: no-repeat;
+    background-size: 100% auto;
+    margin: 0 auto;
+    padding-top: 35px;
 }
 
-.main-header, .catalog-selection {
+
+.main-header {
     color: #FFFFFF;
-    background-color: #83B3D3;
+    padding-left: 71px;
+}
+
+.catalog-selection {
+    color: #FFFFFF;
 }
 
 .breadcrumbs__item {
     color: inherit;
     text-decoration: none;
+    margin-right: 26px;
+}
+
+.breadcrumbs {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    margin: 0 0 45px 0;
+    font-size: 16px;
+    line-height: 131%;
 }
 
 .main-header__title {
     font-size: 60px;
     font-weight: 700;
     line-height: 130%;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .catalog-selection__title {
     font-size: 20px;
     line-height: 130%;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+.catalog-selection__group:nth-child(3) .catalog-selection__title {
+    margin-bottom: 34px;
 }
 
 .control__label {
     line-height: 128%;
+}
+
+.sorting-container {
+    color: #333333;
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 50px 72px 45px 71px;
+    justify-content: flex-start;
+    width: 1057px;
+}
+
+.hotel {
+    padding-top: 31px;
+    padding-bottom: 30px;
+}
+
+.sorting-form select{
+    padding: 12px 127px 13px 19px;
+}
+
+.hotel-number {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 127%;
+}
+
+.sorting-container .button-view {
+    width: 48px;
+    height: 48px;
 }
 
 .button-apply {
@@ -447,19 +546,23 @@ p.appointment-description {
 .button-cancel {
     line-height: 128%;
     text-align: center;
-    background-color: #FFFFFF;
     border: none;
-}
-
-.hotel-number {
-    text-transform: uppercase;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 127%;
+    background: inherit;
+    color: #FFFFFF;
 }
 
 .sorting-form {
     line-height: 128%;
+    margin-right: 81px;
+    margin-left: auto;
+}
+
+.button-table {
+    margin-right: 8px;
+}
+
+.button-one {
+    margin-right: 8px;
 }
 
 .hotel__title {
@@ -520,14 +623,63 @@ p.appointment-description {
     text-transform: uppercase;
 }
 
+.pagination-all {
+    margin-left: 288px;
+    margin-right: 287px;
+    width: 625px;
+}
+
+.pagination {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pagination-container {
+    padding-top: 31px;
+    display: flex;
+    margin-bottom: 89px;
+}
+
 .pagination-current {
     background-color: #F2F2F2;
     color: #000000;
 }
 
+.pagination__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+.pagination__item:last-child {
+    margin-right: 301px;
+}
+
+.hotel-summary {
+    margin-right: 51px;
+}
+
+.select-number {
+    width: 160px;
+    padding: 13px 17px 12px 17px;
+    margin-left: auto;
+}
+
+.pagination__link {
+    display: block;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
 .catalog-selection {
     display: flex;
     width: 1200px;
+    margin-bottom: 83px;
+    padding-left: 71px;
 }
 
 .catalog-selection__group {
@@ -536,5 +688,12 @@ p.appointment-description {
 }
 
 .catalog-column {
-    width: 1056px;
+    width: 1200px;
 }
+
+.catalog-selection__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
