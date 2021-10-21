@@ -156,12 +156,14 @@
                                 <input class="catalog-selection__input" type="number" name="max-price" placeholder="9000">до
                             </label>
                         </fieldset>
-                        <button class="button-apply">
-                            Применить
-                        </button>
-                        <button class="button-cancel" type="reset">
-                            Сбросить
-                        </button>
+                        <div class="button-container">
+                            <button class="button-apply">
+                                Применить
+                            </button>
+                            <button class="button-cancel" type="reset">
+                                Сбросить
+                            </button>
+                        </div>
                     </form>
                     <div class="catalog-column">
                         <div class="sorting-container">
@@ -174,7 +176,7 @@
                                 </label>
                                 <select class="select-control" id="sorting" name="sorting">
                                     <option value="cheap">
-                                        Сначала дешевые
+                                        Сначала дешёвые
                                     </option>
                                     <option value="expensive">
                                         Сначала дорогие
@@ -204,93 +206,95 @@
                             </a>
                         </div>
                         <!-- Разметка карточки гостиницы-->
-                        <article class="hotel">
-                            <img class="hotel__image" src="img/hotels/hotel-1.jpg" width="180" height="120" alt="Amara Resort & Spa">
-                            <h3 class="hotel__title">
-                                Amara Resort & Spa
-                            </h3>
-                            <span class="hotel__type">
-                                Гостиница
-                            </span>
-                            <span class="hotel__price">
-                                От 4000 ₽
-                            </span>
-                            <a class="hotel__link button-details" href="#">
-                                ПОДРОБНЕЕ
-                            </a>
-                            <button class="button-favourites" name="В ИЗБРАННОЕ">
-                                В ИЗБРАННОЕ
-                            </button>
-                            <p class="hotel__rating">
-                                Рейтинг: 8,5
-                            </p>
-                        </article>
-                        <article class="hotel">
-                            <img class="hotel__image" src="img/hotels/hotel-2.jpg" width="180" height="120" alt="Desert Quail Inn">
-                            <h3 class="hotel__title">
-                                Desert Quail Inn
-                            </h3>
-                            <span class="hotel__type">
-                                Мотель
-                            </span>
-                            <span class="hotel__price">
-                                От 3000 ₽
-                            </span>
-                            <a class="hotel__link button-details" href="#">
-                                ПОДРОБНЕЕ
-                            </a>
-                            <button class="button-favourites" name="В ИЗБРАННОЕ">
-                                В ИЗБРАННОЕ
-                            </button>
-                            <p class="hotel__rating">
-                                Рейтинг: 8,9
-                            </p>
-                        </article>
-                        <article class="hotel">
-                            <img class="hotel__image" src="img/hotels/hotel-3.jpg" width="180" height="120" alt="Villas at Poco Diablo">
-                            <h3 class="hotel__title">
-                                Villas at Poco Diablo
-                            </h3>
-                            <span class="hotel__type">
-                                Апартаменты
-                            </span>
-                            <span class="hotel__price">
-                                От 2000 ₽
-                            </span>
-                            <a class="hotel__link button-details" href="#">
-                                ПОДРОБНЕЕ
-                            </a>
-                            <button class="button-favourites button-pushed" name="В ИЗБРАННОМ">
-                                В ИЗБРАННОМ
-                            </button>
-                            <p class="hotel__rating">
-                                Рейтинг: 9,2
-                            </p>
-                        </article>
-                        <article class="hotel">
-                            <img class="hotel__image" src="img/hotels/hotel-4.jpg" width="180" height="120" alt="GreenTree Inn">
-                            <h3 class="hotel__title">
-                                GreenTree Inn
-                            </h3>
-                            <span class="hotel__type">
-                                Гостиница
-                            </span>
-                            <span class="hotel__price">
-                                От 3000 ₽
-                            </span>
-                            <a class="hotel__link button-details" href="#">
-                                ПОДРОБНЕЕ
-                            </a>
-                            <button class="button-favourites" name="В ИЗБРАННОЕ">
-                                В ИЗБРАННОЕ
-                            </button>
-                            <p class="hotel__rating">
-                                Рейтинг: 9,2
-                            </p>
-                        </article>
-                        <button class="button pagination-all" type="button">
+                        <div class="hotel-list">
+                            <article class="hotel">
+                                <img class="hotel__image" src="img/hotels/hotel-1.jpg" width="180" height="120" alt="Amara Resort & Spa">
+                                <h3 class="hotel__title">
+                                    Amara Resort & Spa
+                                </h3>
+                                <span class="hotel__type">
+                                    Гостиница
+                                </span>
+                                <span class="hotel__price">
+                                    От 4000 ₽
+                                </span>
+                                <a class="hotel__link button-details" href="#">
+                                    ПОДРОБНЕЕ
+                                </a>
+                                <button class="button-favourites" name="В ИЗБРАННОЕ">
+                                    В ИЗБРАННОЕ
+                                </button>
+                                <p class="hotel__rating">
+                                    Рейтинг: 8,5
+                                </p>
+                            </article>
+                            <article class="hotel">
+                                <img class="hotel__image" src="img/hotels/hotel-2.jpg" width="180" height="120" alt="Desert Quail Inn">
+                                <h3 class="hotel__title">
+                                    Desert Quail Inn
+                                </h3>
+                                <span class="hotel__type">
+                                    Мотель
+                                </span>
+                                <span class="hotel__price">
+                                    От 3000 ₽
+                                </span>
+                                <a class="hotel__link button-details" href="#">
+                                    ПОДРОБНЕЕ
+                                </a>
+                                <button class="button-favourites" name="В ИЗБРАННОЕ">
+                                    В ИЗБРАННОЕ
+                                </button>
+                                <p class="hotel__rating">
+                                    Рейтинг: 8,9
+                                </p>
+                            </article>
+                            <article class="hotel">
+                                <img class="hotel__image" src="img/hotels/hotel-3.jpg" width="180" height="120" alt="Villas at Poco Diablo">
+                                <h3 class="hotel__title">
+                                    Villas at Poco Diablo
+                                </h3>
+                                <span class="hotel__type">
+                                    Апартаменты
+                                </span>
+                                <span class="hotel__price">
+                                    От 2000 ₽
+                                </span>
+                                <a class="hotel__link button-details" href="#">
+                                    ПОДРОБНЕЕ
+                                </a>
+                                <button class="button-favourites button-pushed" name="В ИЗБРАННОМ">
+                                    В ИЗБРАННОМ
+                                </button>
+                                <p class="hotel__rating">
+                                    Рейтинг: 9,2
+                                </p>
+                            </article>
+                            <article class="hotel">
+                                <img class="hotel__image" src="img/hotels/hotel-4.jpg" width="180" height="120" alt="GreenTree Inn">
+                                <h3 class="hotel__title">
+                                    GreenTree Inn
+                                </h3>
+                                <span class="hotel__type">
+                                    Гостиница
+                                </span>
+                                <span class="hotel__price">
+                                    От 3000 ₽
+                                </span>
+                                <a class="hotel__link button-details" href="#">
+                                    ПОДРОБНЕЕ
+                                </a>
+                                <button class="button-favourites" name="В ИЗБРАННОЕ">
+                                    В ИЗБРАННОЕ
+                                </button>
+                                <p class="hotel__rating">
+                                    Рейтинг: 9,2
+                                </p>
+                            </article>
+                            <button class="button button-more" type="button">
                             ЗАГРУЗИТЬ ЕЩЕ
-                        </button>
+                            </button>
+                        </div>
                         <div class="pagination-container">
                             <ul class="pagination">
                                 <li class="pagination__item">
