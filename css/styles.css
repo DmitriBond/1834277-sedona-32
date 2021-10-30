@@ -42,6 +42,7 @@ body {
 }
 
 .button {
+    display: inline-block;
     font-family: inherit;
     font-size: 20px;
     line-height: 180%;
@@ -54,8 +55,9 @@ body {
     text-transform: uppercase;
     margin-bottom: 91px;
     padding-top: 13px;
-    padding-bottom: 17px;
+    padding-bottom: 12px;
     width: 575px;
+    cursor: pointer;
 }
 
 .navigation-main {
@@ -66,20 +68,20 @@ body {
 .navigation-left, .navigation-right {
     padding: 0;
     margin: 0;
-    width: 410px;
+    width: 419px;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
 }
 
 .navigation-left {
-    margin-left: 62px;
+    margin-left: 53px;
 }
 
 .navigation-right {
     max-width: 350px;
     margin-left: auto;
-    margin-right: 72px;
+    margin-right: 67px;
     justify-content: flex-end;
 }
 
@@ -87,16 +89,12 @@ body {
     min-width: 18px;
     min-height: 18px;
     padding: 10px 10px;
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin: 14px 0 14px 0;
     display: block;
 }
 
-.navigation-right .navigation-link:nth-child(3) {
-    min-width: 160px;
-    min-height: 18px;
-    padding-top: 9px;
-    padding-bottom: 10px;
+.navigation-right .navigation-item:first-child {
+    margin-right: 1px;
 }
 
 .navigation-center {
@@ -105,16 +103,19 @@ body {
     margin-left: 59px;
 }
 
-.navigation-right li:last-child {
+.navigation-right li:last-child .navigation-link {
     font-size: 16px;
     line-height: 131%;
     border-radius: 4px;
     color: #FFFFFF;
     background-color: #756257;
     text-transform: uppercase;
+    padding: 8px 34px 8px 34px;
+    margin: 14px 8px 14px 19px;
 }
 
 .navigation-link {
+    position: relative;
     font-size: 20px;
     font-weight: 700;
     line-height: 130%;
@@ -123,11 +124,16 @@ body {
     text-align: center;
     padding: 6px 12px;
     display: block;
-    margin: 13px 9px;
+    margin: 13px 6px;
+}
+
+.logo {
+    z-index: 1;
 }
 
 .main-container {
     flex-grow: 1;
+    margin-top: -5px;
 }
 
 .page-container {
@@ -142,7 +148,7 @@ body {
     height: 485px;
     text-align: center;
     padding-top: 51px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .advantages {
@@ -157,7 +163,7 @@ body {
 
 .advantages h2 {
     margin: 0;
-    padding-bottom: 23px;
+    margin-bottom: 34px;
     font-size: 30px;
     line-height: 120%;
 }
@@ -229,17 +235,26 @@ body {
 }
 
 .advantages__summary {
-    margin-bottom: 79px;
+    margin-bottom: 81px;
 }
 
 .advantages-description {
     margin-top: 0;
     margin-bottom: 79px;
+    line-height: 117%;
 }
 
+
+
 .advantages__number {
-    margin-bottom: 26px;
+    margin-bottom: 31px;
+    margin-top: 0;
 }
+
+.advantages-item:first-child .advantages__number {
+    margin-bottom: 25px;
+}
+
 
 .advantages__number + p.advantages-description {
     margin-bottom: 77px;
@@ -248,6 +263,14 @@ body {
 .advantages-item {
     width: 400px;
     height: 384px;
+}
+
+.advantages-item:first-child .advantages-title, .advantages-item:nth-child(5) .advantages-title {
+    margin-bottom: 24px;
+}
+
+.advantages-item:first-child .advantages-description {
+    margin-bottom: 80px;
 }
 
 .advantages-title {
@@ -259,12 +282,12 @@ body {
 }
 
 h3.advantages-title {
+    margin-bottom: 29px;
     margin-top: 98px;
-    margin-bottom: 25px;
 }
 
 h4.advantages-title {
-    margin-top: 184px;
+    margin-top: 187px;
     margin-bottom: 20px;
 }
 .advantages-list li:first-child,
@@ -289,7 +312,7 @@ h4.advantages-title {
 }
 
 h3.appointment-title {
-    margin-top: 91px;
+    margin-top: 88px;
     margin-bottom: 15px;
 }
 
@@ -313,6 +336,8 @@ p.appointment-description {
 }
 
 .button-submit {
+    display: inline-block;
+    box-sizing: border-box;
     font-family: inherit;
     font-size: 20px;
     line-height: 130%;
@@ -323,6 +348,12 @@ p.appointment-description {
     border-radius: 0 10px 10px 0;
     text-decoration: none;
     text-transform: uppercase;
+    border: 0;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 .mailing {
@@ -340,7 +371,7 @@ p.appointment-description {
 
 .mailing-title {
     margin-top: 94px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 30px;
     line-height: 120%;
 }
@@ -367,7 +398,7 @@ p.appointment-description {
 }
 
 .mailing-form {
-    font-display: flex;
+    display: flex;
     justify-content: flex-start;
     margin-bottom: 93px;
 }
@@ -378,13 +409,13 @@ p.appointment-description {
     margin: 0;
     padding: 0;
     border-radius: 10px 0 0 10px;
+    border: 0;
+    font-size: 18px;
+    line-height: 144%;
 }
 
-.mailing-form button {
-    width: 200px;
-    height: 61px;
-    margin: 0;
-    padding: 0;
+.mailing-catalog .mailing-form input {
+    background-color: #F2F2F2;
 }
 
 .appointment-description {
@@ -395,30 +426,41 @@ p.appointment-description {
     display: flex;
     margin: 0 auto;
     width: 1200px;
-    justify-content: center;
-    padding-top: 40px;
+    padding-top: 38px;
     padding-bottom: 30px;
 }
 
+.mailing-catalog + .footer-index__container {
+    padding-top: 80px;
+}
+
 .socials {
-    max-width: 134px;
-    margin-left: 50px;
+    max-width: 240px;
 }
 
 .socials-list {
-    margin: 0;
+    margin: 0 0 0 61px;
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .socials-item {
-    height: 40px;
-    width: 40px;
     margin-right: 7px;
     margin-bottom: 7px;
+}
+
+.link-twitter {
+    padding: 12px 11px 13px 11px;
+}
+
+.link-facebook {
+    padding: 11px 15px 11px 15px;
+}
+
+.link-youtube {
+    padding: 12px 10px 12px 10px;
 }
 
 .socials-item:nth-child(3n) {
@@ -426,8 +468,9 @@ p.appointment-description {
 }
 
 .contacts {
-    width: 720px;
+    margin-left: 45px;
     margin-right: 53px;
+    width: 720px;
     text-align: center;
 }
 
@@ -442,7 +485,10 @@ p.appointment-description {
 
 .developer {
     width: 115px;
-    margin-right: 72px;
+}
+
+.developer-logo {
+    padding-top: 6px;
 }
 
 .main-catalog {
@@ -450,7 +496,8 @@ p.appointment-description {
     background-repeat: no-repeat;
     background-size: 100% auto;
     margin: 0 auto;
-    padding-top: 35px;
+    padding-top: 32px;
+    margin-top: -5px;
 }
 
 
@@ -479,7 +526,7 @@ p.appointment-description {
     font-weight: 700;
     line-height: 130%;
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: -2px;
 }
 
 .catalog-selection__title {
@@ -519,7 +566,7 @@ p.appointment-description {
 .button-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top: 62px;
 }
 
 .control__label {
@@ -530,17 +577,25 @@ p.appointment-description {
     color: #333333;
     background-color: #FFFFFF;
     display: flex;
-    padding: 50px 72px 45px 71px;
+    padding: 44px 72px 45px 71px;
     justify-content: flex-start;
     width: 1057px;
 }
 
-.sorting-form select{
-    padding: 12px 127px 13px 19px;
+.sorting-form select {
+    padding: 12px 0 13px 16px;
+    height: 48px;
+    width: 287px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 129%;
+    box-sizing: border-box;
 }
 
 .hotel-number {
-    margin-top: 0;
+    margin-top: 6px;
     margin-bottom: 0;
     text-transform: uppercase;
     font-size: 30px;
@@ -549,11 +604,14 @@ p.appointment-description {
 }
 
 .sorting-container .button-view {
+    box-sizing: border-box;
     width: 48px;
     height: 48px;
 }
 
 .button-apply {
+    box-sizing: border-box;
+    display: inline-block;
     font-size: 16px;
     line-height: 131%;
     font-weight: 700;
@@ -565,9 +623,13 @@ p.appointment-description {
     border-radius: 4px;
     padding-top: 13px;
     padding-bottom: 13px;
+    border: none;
+    cursor: pointer;
 }
 
 .button-cancel {
+    display: inline-block;
+    box-sizing: border-box;
     line-height: 128%;
     text-align: center;
     border: none;
@@ -575,6 +637,8 @@ p.appointment-description {
     color: #FFFFFF;
     width: 160px;
     margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .sorting-form {
@@ -583,19 +647,31 @@ p.appointment-description {
     margin-left: auto;
 }
 
-.button-table {
+.button-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 8px;
+    border: 2px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 48px;
+    height: 48px;
 }
 
-.button-one {
-    margin-right: 8px;
+.button-view:last-child {
+    margin-right: 0;
+}
+
+.button-view-current {
+    border: 2px solid #000000;
 }
 
 .hotel__title {
     font-size: 24px;
     line-height: 129%;
     font-weight: 700;
-    margin: 0;
+    margin: -5px 0 0 0;
     grid-column: 3 / 6;
     grid-row: 2 / 3;
 }
@@ -615,6 +691,7 @@ p.appointment-description {
 }
 
 .button-details {
+    display: inline-block;
     font-family: inherit;
     font-size: 16px;
     line-height: 125%;
@@ -629,9 +706,12 @@ p.appointment-description {
     padding-bottom: 10px;
     grid-column: 3 / 4;
     grid-row: 4 / 5;
+    cursor: pointer;
+    border: none;
 }
 
 .button-favourites {
+    display: inline-block;
     font-family: inherit;
     font-size: 16px;
     line-height: 125%;
@@ -644,6 +724,8 @@ p.appointment-description {
     text-transform: uppercase;
     grid-column: 5 / 6;
     grid-row: 4 / 5;
+    cursor: pointer;
+    border: none;
 }
 
 .hotel__rating {
@@ -678,6 +760,32 @@ p.appointment-description {
     grid-column: 2 / 3;
     grid-template-rows: 31px min-content auto 37px 30px;
     grid-template-columns: 180px 37px 151px 8px 160px auto;
+    background-image: url("../img/stars-4.svg");
+    background-repeat: no-repeat;
+}
+
+.hotel:first-child {
+    background-image: url("../img/stars-4.svg");
+    background-repeat: no-repeat;
+    background-position: 930px 33px;
+}
+
+.hotel:nth-child(2) {
+    background-image: url("../img/stars-3.svg");
+    background-repeat: no-repeat;
+    background-position: 940px 31px;
+}
+
+.hotel:nth-child(3) {
+    background-image: url("../img/stars-2.svg");
+    background-repeat: no-repeat;
+    background-position: 956px 33px;
+}
+
+.hotel:nth-child(4) {
+    background-image: url("../img/stars-2.svg");
+    background-repeat: no-repeat;
+    background-position: 956px 33px;
 }
 
 .hotel__image {
@@ -696,11 +804,17 @@ p.appointment-description {
 }
 
 .button-more {
+    box-sizing: border-box;
+    display: inline-block;
     justify-self: center;
-    margin-top: 31px;
+    margin-top: 27px;
     margin-bottom: 30px;
     width: 625px;
     grid-column: 2 / 3;
+    border: 0;
+    cursor: pointer;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .pagination {
@@ -708,6 +822,10 @@ p.appointment-description {
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+ul.pagination {
+    margin-left: 72px;
 }
 
 .pagination-container {
@@ -735,7 +853,11 @@ p.appointment-description {
 .select-number {
     width: 160px;
     padding: 13px 17px 12px 17px;
-    margin-left: auto;
+    font-size: 18px;
+    line-height: 128%;
+    font-family:  font-family: "PT Sans";
+    border: 2px solid #E6E6E6;
+    border-radius: 4px;
 }
 
 .pagination__link {
@@ -745,6 +867,11 @@ p.appointment-description {
     height: 55px;
     padding: 14px 20px;
     text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination__item:last-child .pagination__link:last-child {
+    padding-left: 15px;
 }
 
 .catalog-selection {
@@ -752,7 +879,7 @@ p.appointment-description {
     display: flex;
     width: 1200px;
     box-sizing: border-box;
-    margin-bottom: 83px;
+    margin-bottom: 74px;
     padding-left: 71px;
 }
 
@@ -771,3 +898,48 @@ p.appointment-description {
     margin: 0;
 }
 
+.navigation-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #000000;
+  }
+
+.favourites-counter {
+    position: absolute;
+    z-index: 1;
+    font-family: PT Sans;
+    font-size: 10px;
+    line-height: 130%;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #7DB54F;
+    border-radius: 50%;
+    width: 19px;
+    height: 13px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transform: translate(3px, -10px);
+}
+
+.advantages-item:nth-child(2) {
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: center 93px;
+}
+
+.advantages-item:nth-child(3) {
+    background-image: url("../img/icon-food.svg");
+    background-repeat: no-repeat;
+    background-position: center 93px;
+}
+
+
+.advantages-item:nth-child(4) {
+    background-image: url("../img/icon-souvenir.svg");
+    background-repeat: no-repeat;
+    background-position: center 89px;
