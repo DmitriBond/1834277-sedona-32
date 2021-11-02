@@ -1311,7 +1311,7 @@ ul.pagination {
     outline: none;
 }
 
-.field:focus:invalid {
+.field:invalid {
     box-shadow: 0 0 0 3px #EA5454;
 }
 
@@ -1321,3 +1321,6 @@ ul.pagination {
     background-color: #FFFFFF;
 }
 
+.field:disabled,
+.field:disabled:hover {
+  background-color: #E6E6E6;
