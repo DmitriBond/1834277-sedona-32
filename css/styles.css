@@ -403,17 +403,18 @@ p.appointment-description {
     margin-bottom: 93px;
 }
 
-.mailing-form input {
+.field {
+    box-sizing: border-box;
     width: 600px;
     height: 60px;
     margin: 0;
-    padding: 0;
+    padding: 0 19px 0 22px;
     border-radius: 10px 0 0 10px;
     border: 0;
-    font-size: 18px;
+    font: inherit;
+    font-weight: 400;
     line-height: 144%;
     background-color: #F2F2F2;
-    font-family: "PT Sans";
     color: rgba(0, 0, 0, 0.6);
 }
 
@@ -1299,3 +1300,24 @@ ul.pagination {
     box-sizing: border-box;
     border-radius: 4px;
 }
+
+.field:hover {
+    background-color: #E5E5E5;
+}
+
+.field:focus {
+    background-color: #E6E6E6;
+    box-shadow: 0 0 0 3px #83B3D3;
+    outline: none;
+}
+
+.field:focus:invalid {
+    box-shadow: 0 0 0 3px #EA5454;
+}
+
+.field:active {
+    box-shadow: none;
+    color: rgba(0, 0, 0, 1);
+    background-color: #FFFFFF;
+}
+
