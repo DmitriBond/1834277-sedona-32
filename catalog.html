@@ -94,26 +94,23 @@
                             <ul class="catalog-selection__list">
                                 <li class="catalog-selection__item">
                                     <label class="control">
-                                        <input class="visually-hidden input" type="checkbox" name="pool" checked>
-                                        <span class="control__label">
-                                            Бассейн
-                                        </span>
+                                        <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                                        <span class="control-mark"></span>
+                                        <span class="control__label">Бассейн</span>
                                     </label>
                                 </li>
                                 <li class="catalog-selection__item">
                                     <label class="control">
-                                        <input class="visually-hidden input" type="checkbox" name="parking" checked>
-                                        <span class="control__label">
-                                            Парковка
-                                        </span>
+                                        <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                                        <span class="control-mark"></span>
+                                        <span class="control__label">Парковка</span>
                                     </label>
                                 </li>
                                 <li class="catalog-selection__item">
                                     <label class="control">
-                                        <input class="visually-hidden input" type="checkbox" name="wi-fi">
-                                        <span class="control__label">
-                                            Wi-Fi
-                                        </span>
+                                        <input class="visually-hidden control-input" type="checkbox" name="wi-fi" tabindex="0">
+                                        <span class="control-mark"></span>
+                                        <span class="control__label">Wi-Fi</span>
                                     </label>
                                 </li>
                             </ul>
@@ -125,26 +122,23 @@
                             <ul class="catalog-selection__list">
                                 <li class="catalog-selection__item">
                                     <label class="control">
-                                        <input class="visually-hidden input" type="radio" name="hotel-type-group" value="hotel" checked>
-                                        <span class="control__label">
-                                            Гостиница
-                                        </span>
+                                        <input class="visually-hidden control-input" type="radio" name="hotel-type-group" value="hotel" checked>
+                                        <span class="control-mark"></span>
+                                        <span class="control__label">Гостиница</span>
                                     </label>
                                 </li>
                                 <li class="catalog-selection__item">
                                     <label class="control">
-                                        <input class="visually-hidden input" type="radio" name="hotel-type-group" value="motel">
-                                        <span class="control__label">
-                                            Мотель
-                                        </span>
+                                        <input class="visually-hidden control-input" type="radio" name="hotel-type-group" value="motel">
+                                        <span class="control-mark"></span>
+                                        <span class="control__label">Мотель</span>
                                     </label>
                                 </li>
                                 <li class="catalog-selection__item">
                                     <label class="control">
-                                        <input class="visually-hidden input" type="radio" name="hotel-type-group" value="appartments">
-                                        <span class="control__label">
-                                            Апартаменты
-                                        </span>
+                                        <input class="visually-hidden control-input" type="radio" name="hotel-type-group" value="appartments">
+                                        <span class="control-mark"></span>
+                                        <span class="control__label">Апартаменты</span>
                                     </label>
                                 </li>
                             </ul>
@@ -153,18 +147,26 @@
                             <legend class="catalog-selection__title">
                                 Стоимость, ₽:
                             </legend>
-                            <button class="range-toggle toggle-min" type="button">
-                                <span class="visually-hidden">Изменить минимальную цену</span>
-                            </button>
-                            <button class="range-toggle toggle-max" type="button">
-                                <span class="visually-hidden">Изменить максимальную цену</span>
-                            </button>
-                            <label class="catalog-selection__label">
-                                <input class="catalog-selection__input" type="number" name="min-price" placeholder="0">от
-                            </label>
-                            <label class="catalog-selection__label">
-                                <input class="catalog-selection__input" type="number" name="max-price" placeholder="9000">до
-                            </label>
+                            <div class="range">
+                                <div class="range-wrapper-inputs">
+                                    <label class="catalog-selection__label">
+                                        <input class="catalog-selection__input" type="number" name="min-price" value="0">
+                                    </label>
+                                    <label class="catalog-selection__label">
+                                        <input class="catalog-selection__input" type="number" name="max-price" value="9000">
+                                    </label>
+                                </div>
+                                <div class="range-scale">
+                                    <div class="range-bar" style="right: 60px; width: 227px">
+                                        <button class="range-toggle toggle-min">
+                                            <span class="visually-hidden">Изменить минимальную цену</span>
+                                        </button>
+                                        <button class="range-toggle toggle-max">
+                                            <span class="visually-hidden">Изменить максимальную цену</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
                         <div class="button-container">
                             <button class="button-apply">
@@ -183,20 +185,22 @@
                                 НАЙДЕНО ГОСТИНИЦ: 38
                             </p>
                             <form class="sorting-form">
-                                <label class=" visually-hidden" for="sorting">
-                                    Сортировка
-                                </label>
-                                <select class="select-control" id="sorting" name="sorting">
-                                    <option value="cheap">
-                                        Сначала дешёвые
-                                    </option>
-                                    <option value="expensive">
-                                        Сначала дорогие
-                                    </option>
-                                    <option value="popular">
-                                        Сначала популярные
-                                    </option>
-                                </select>
+                                <div class="select">
+                                    <label class=" visually-hidden" for="sorting">
+                                        Сортировка
+                                    </label>
+                                    <select class="select-control" id="sorting" name="sorting">
+                                        <option value="cheap">
+                                            Сначала дешёвые
+                                        </option>
+                                        <option value="expensive">
+                                            Сначала дорогие
+                                        </option>
+                                        <option value="popular">
+                                            Сначала популярные
+                                        </option>
+                                    </select>
+                                </div>
                                 <button class="visually-hidden">
                                     Отсортировать гостиницы
                                 </button>
