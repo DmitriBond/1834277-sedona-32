@@ -322,52 +322,60 @@
                             <label for="arrival-day">Дата заезда:</label>
                             <input class="search-form-field" type="text" id="arrival-day" name="arrival-day" placeholder="Укажите дату" value="27 апреля 2020">
                         </p>
+                        <span class="field-group error">Мы не можем отправить Вас в прошлое</span>
                         <p class="field-group departure-form">
                             <label for="departure-day">Дата выезда:</label>
                             <input class="search-form-field" type="text" id="departure-day" name="departure-day" placeholder="Укажите дату" value="1 сентября 2021">
                         </p>
+                        <span class="field-group hint">На эти даты есть свободные номера. Пока есть.</span>
                         <div class="tourists">
-                            <p class="field-group adult-form">
+                            <div class="field-group adult-form">
                                 <label for="adult-number">Взрослые:</label>
-                                <button class="button-minus">
-                                    <svg class="button-minus-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 0v1h13V0H0Z"/>
-                                    </svg>
-                                    <span class="visually-hidden">Уменьшить количество взрослых</span>
-                                </button>
-                                <input class="search-form-field" type="number" id="adult-number" name="adult-number" value="2">
-                                <button class="button-plus">
-                                    <svg class="button-plus-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
-                                    </svg>
-                                    <span class="visually-hidden">Увеличить количество взрослых</span>
-                                </button>
-                            </p>
-                            <p class="field-group children-form">
-                                <!--<div class="tooltiptext">
-                                    <span>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                                <div class="counter">
+                                    <button class="button-minus">
+                                        <svg class="button-minus-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0v1h13V0H0Z"/>
+                                        </svg>
+                                        <span class="visually-hidden">Уменьшить количество взрослых</span>
+                                    </button>
+                                    <input class="search-form-field" type="number" id="adult-number" name="adult-number" value="2">
+                                    <button class="button-plus">
+                                        <svg class="button-plus-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                                        </svg>
+                                        <span class="visually-hidden">Увеличить количество взрослых</span>
+                                    </button>
                                 </div>
-                                -->
+                            </div>
+                            <div class="field-group children-form">
                                 <span class="children-form-icon">
                                     <label for="children-number">Дети:</label>
                                     <button class="info" type="button">
                                         <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                                                                            <div class="tooltip">
+                                        <p class="tooltiptext">
+                                            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                                        </p>
+                                    </div>
                                     </button>
+
                                 </span>
-                                <button class="button-minus">
-                                    <svg class="button-minus-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 0v1h13V0H0Z"/>
-                                    </svg>
-                                    <span class="visually-hidden">Уменьшить количество детей</span>
-                                </button>
-                                <input class="search-form-field" type="number" id="children-number" name="children-number" value="1">
-                                <button class="button-plus">
-                                    <svg class="button-plus-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
-                                    </svg>
-                                    <span class="visually-hidden">Увеличить количество детей</span>
-                                </button>
-                            </p>
+                                <div class="counter">
+                                    <button class="button-minus">
+                                        <svg class="button-minus-icon" aria-hidden="true" focusable="false" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0v1h13V0H0Z"/>
+                                        </svg>
+                                        <span class="visually-hidden">Уменьшить количество детей</span>
+                                    </button>
+                                    <input class="search-form-field" type="number" id="children-number" name="children-number" value="1">
+                                    <button class="button-plus">
+                                        <svg class="button-plus-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/>
+                                        </svg>
+                                        <span class="visually-hidden">Увеличить количество детей</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                     <button class="button-modal">

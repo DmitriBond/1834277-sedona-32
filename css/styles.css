@@ -1760,7 +1760,6 @@ ul.pagination {
 
 .search-form .field-group {
     margin: 0;
-    padding-bottom: 40px;
 }
 
 .search-form {
@@ -1796,11 +1795,29 @@ ul.pagination {
     width: 288px;
 }
 
-.adult-form .search-form-field,
+.children-form {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 288px;
+}
+
+
+.adult-form .search-form-field {
+    width: 133px;
+    height: 50px;
+    font-weight: 700;
+    font-family: inherit;
+    text-align: center;
+    font-size: 18px;
+    line-height: 222%;
+}
+
 .children-form .search-form-field {
     width: 133px;
     height: 50px;
-    font-weight: 700px;
+    font-weight: 700;
     font-family: inherit;
     text-align: center;
     font-size: 18px;
@@ -1813,10 +1830,14 @@ ul.pagination {
   margin: 0;
 }
 
+.counter {
+    position: relative;
+}
+
 .button-minus {
     position: absolute;
-    top: 15px;
-    left: 160px;
+    top: 12px;
+    left: 10px;
     border: none;
     padding: 2px 6px 12px 6px;
     background-color: transparent;
@@ -1850,7 +1871,7 @@ ul.pagination {
 
 .button-plus {
     position: absolute;
-    top: 16px;
+    top: 13px;
     right: 15px;
     border: none;
     padding: 6px;
@@ -1909,7 +1930,8 @@ ul.pagination {
 
 .tourists {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: 575px;
 }
 
 .search-form {
@@ -1924,11 +1946,9 @@ ul.pagination {
     transform: translate(540px, 0);
 }
 
-.arrival-form::after {
-    position: absolute;
-    content: "Мы не можем отправить Вас в прошлое";
+.field-group.error {
     color: #FF5757;
-    transform: translate(160px, 40px);
+    margin-left: 155px;
     font-weight: 400;
     font-size: 16px;
     line-height: 250%;
@@ -1942,14 +1962,16 @@ ul.pagination {
     transform: translate(540px, 0);
 }
 
-.departure-form::after {
-    position: absolute;
-    content: "На эти даты есть свободные номера. Пока есть.";
-    transform: translate(160px, 40px);
+.field-group.hint {
     color: #333333;
     font-weight: 400;
     font-size: 16px;
     line-height: 250%;
+    margin-left: 155px;
+}
+
+.search-form {
+    padding-bottom: 40px;
 }
 
 .search-form-field {
@@ -1985,14 +2007,6 @@ ul.pagination {
     outline: 2px solid #000000;
     color: #000000;
     background-color: #FFFFFF;
-}
-
-.search-form-field:focus:invalid .arrival-form::after{
-    visibility: visible;
-}
-
-.search-form-field:focus:valid .arrival-form::after{
-    visibility: visible;
 }
 
 .button-modal {
@@ -2043,20 +2057,44 @@ ul.pagination {
     cursor: pointer;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
 .tooltiptext {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 350px;
-    min-height: 105px;
+    width: 256px;
+    min-height: 143px;
     font-family: "PT Sans", sans-serif;
+    font-weight: 400;
     background-color: #333333;
     box-sizing: border-box;
-    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    display: none;
+    font-size: 16px;
+    line-height: 125%;
+    color: #FFFFFF;
+    padding: 17px 18px 18px 22px;
+    transform: translate(-128px, 8px);
+    border-radius: 10px;
+    text-align: start;
+    visibility: hidde;
 }
+
+.tooltiptext::after {
+    top: -125px;
+    right: -22px;
+    position: relative;
+    border-bottom: 9px solid #333333;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+.info:hover .tooltiptext {
+    visibility: visible;
+  }
 
 .modal-container-close {
     display: none;
