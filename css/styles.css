@@ -1788,7 +1788,6 @@ ul.pagination {
 }
 
 .adult-form {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1798,30 +1797,32 @@ ul.pagination {
 .children-form {
     position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     width: 288px;
 }
 
 
 .adult-form .search-form-field {
-    width: 133px;
+    width: 33px;
     height: 50px;
     font-weight: 700;
     font-family: inherit;
     text-align: center;
     font-size: 18px;
     line-height: 222%;
+    padding: 1px 2px 3px 2px;
+    border-radius: 0;
 }
 
 .children-form .search-form-field {
-    width: 133px;
+    width: 33px;
     height: 50px;
     font-weight: 700;
     font-family: inherit;
     text-align: center;
     font-size: 18px;
     line-height: 222%;
+    padding: 1px 2px 3px 2px;
+    border-radius: 0;
 }
 
 .search-form-field::-webkit-outer-spin-button,
@@ -1831,18 +1832,31 @@ ul.pagination {
 }
 
 .counter {
-    position: relative;
+    display: flex;
 }
 
 .button-minus {
-    position: absolute;
-    top: 12px;
-    left: 10px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 10px 18px 18px 19px;
     border: none;
-    padding: 2px 6px 12px 6px;
-    background-color: transparent;
+    border-radius: 4px 0 0 4px;
+    background-color: #F2F2F2;
     cursor: pointer;
 }
+
+.button-minus::before {
+    content: "";
+    outline: 3px solid #83B3D3;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transform: translate(-5px, 0);
+    visibility: hidden;
+    border-radius: 4px;
+}
+
 
 .button-minus-icon {
     fill-opacity: 0.3;
@@ -1853,12 +1867,15 @@ ul.pagination {
 }
 
 .button-minus:focus {
-    outline: 3px solid #83B3D3;
-    border-radius: 4px;
+    outline: none;
 }
 
 .button-minus:focus .button-minus-icon {
     fill-opacity: 1;
+}
+
+.button-minus:focus::before {
+    visibility: visible;
 }
 
 .button-minus:active {
@@ -1870,13 +1887,25 @@ ul.pagination {
 }
 
 .button-plus {
-    position: absolute;
-    top: 13px;
-    right: 15px;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 19px 15px 19px 12px;
     border: none;
-    padding: 6px;
-    background-color: transparent;
+    background-color: #F2F2F2;
     cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.button-plus::before {
+    content: "";
+    outline: 3px solid #83B3D3;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transform: translate(-6px, -5px);
+    visibility: hidden;
+    border-radius: 4px;
 }
 
 .button-plus-icon {
@@ -1888,8 +1917,11 @@ ul.pagination {
 }
 
 .button-plus:focus {
-    outline: 3px solid #83B3D3;
-    border-radius: 4px;
+    outline: none;
+}
+
+.button-plus:focus::before {
+    visibility: visible;
 }
 
 .button-plus:focus .button-plus-icon {
@@ -1922,11 +1954,6 @@ ul.pagination {
     padding-right: 48px;
 }
 
-.children-form .search-form-field {
-    width: 133px;
-    height: 50px;
-    text-align: center;
-}
 
 .tourists {
     display: flex;
@@ -2009,6 +2036,32 @@ ul.pagination {
     background-color: #FFFFFF;
 }
 
+.adult-form input:hover {
+    background-color: #F2F2F2;
+}
+
+.adult-form input:focus {
+    box-shadow: none;
+}
+
+.adult-form input:active {
+    outline: none;
+    background-color: #F2F2F2;
+}
+
+.children-form input:hover {
+    background-color: #F2F2F2;
+}
+
+.children-form input:focus {
+    box-shadow: none;
+}
+
+.children-form input:active {
+    outline: none;
+    background-color: #F2F2F2;
+}
+
 .button-modal {
     box-sizing: border-box;
     display: inline-block;
@@ -2051,9 +2104,6 @@ ul.pagination {
     padding: 0;
     background-color: transparent;
     border: none;
-    background-image: url("../img/icon-info.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
 }
 
@@ -2074,10 +2124,10 @@ ul.pagination {
     line-height: 125%;
     color: #FFFFFF;
     padding: 17px 18px 18px 22px;
-    transform: translate(-128px, 8px);
+    transform: translate(-128px, -16px);
     border-radius: 10px;
     text-align: start;
-    visibility: hidde;
+    visibility: hidden;
 }
 
 .tooltiptext::after {
@@ -2095,6 +2145,10 @@ ul.pagination {
 .info:hover .tooltiptext {
     visibility: visible;
   }
+
+.info:hover svg circle{
+    fill: #68A2CA;
+}
 
 .modal-container-close {
     display: none;
