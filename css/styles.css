@@ -22,6 +22,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    min-width: 1200px;
     min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -117,6 +118,10 @@ body {
     text-transform: uppercase;
     padding: 8px 34px 8px 34px;
     margin: 14px 8px 14px 19px;
+    max-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .navigation-link {
@@ -258,14 +263,13 @@ body {
     margin-bottom: 25px;
 }
 
-
 .advantages__number + p.advantages-description {
     margin-bottom: 77px;
 }
 
 .advantages-item {
     width: 400px;
-    height: 384px;
+    min-height: 384px;
 }
 
 .advantages-item:first-child .advantages-title, .advantages-item:nth-child(5) .advantages-title {
@@ -317,6 +321,9 @@ h4.advantages-title {
 h3.appointment-title {
     margin-top: 88px;
     margin-bottom: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
 }
 
 p.appointment-description {
@@ -354,9 +361,9 @@ p.appointment-description {
     border: 0;
     cursor: pointer;
     width: 200px;
-    height: 60px;
+    min-height: 60px;
     margin: 0;
-    padding: 0;
+    padding: 5px;
 }
 
 .mailing {
@@ -377,6 +384,9 @@ p.appointment-description {
     margin-bottom: 30px;
     font-size: 30px;
     line-height: 120%;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
 }
 
 .mailing-catalog {
@@ -409,7 +419,7 @@ p.appointment-description {
 .field {
     box-sizing: border-box;
     width: 600px;
-    height: 60px;
+    min-height: 60px;
     margin: 0;
     padding: 0 19px 0 22px;
     border-radius: 10px 0 0 10px;
@@ -628,7 +638,7 @@ p.appointment-description {
 }
 
 .sorting-form select {
-    padding: 10px 0 15px 16px;
+    padding: 10px 48px 15px 16px;
     height: 48px;
     width: 287px;
     border-radius: 4px;
@@ -638,7 +648,6 @@ p.appointment-description {
     line-height: 129%;
     box-sizing: border-box;
     border: 2px solid #E6E6E6;
-    border-radius: 4px;
 }
 
 .hotel-number {
@@ -718,10 +727,12 @@ p.appointment-description {
     font-size: 24px;
     line-height: 129%;
     font-weight: 700;
-    margin: -5px 0 0 0;
+    margin: -5px 0 0 -10px;
     grid-column: 3 / 6;
     grid-row: 2 / 3;
     width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .hotel__type {
@@ -804,7 +815,7 @@ p.appointment-description {
 
 .hotel {
     display: grid;
-    height: 181px;
+    min-height: 181px;
     grid-column: 2 / 3;
     grid-template-rows: 31px min-content auto 37px 30px;
     grid-template-columns: 180px 37px 151px 8px 160px auto;
@@ -903,7 +914,7 @@ ul.pagination {
 .select-number {
     width: 160px;
     height: 48px;
-    padding: 13px 17px 12px 17px;
+    padding: 13px 48px 12px 17px;
     font-size: 18px;
     line-height: 128%;
     box-sizing: border-box;
@@ -918,17 +929,15 @@ ul.pagination {
 }
 
 .pagination__link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-    width: 55px;
-    height: 55px;
-    padding: 14px 20px;
+    min-width: 55px;
+    min-height: 55px;
+    padding: 2px;
     text-decoration: none;
     border-radius: 4px;
-}
-
-.pagination__item:last-child .pagination__link:last-child {
-    padding-left: 15px;
 }
 
 .catalog-selection {
@@ -1234,7 +1243,7 @@ ul.pagination {
 }
 
 .button-details:focus {
-    outline: 3px solid #83B3D3;
+    outline: 2px solid #83B3D3;
     background-color: #615048;
 }
 
@@ -1280,7 +1289,8 @@ ul.pagination {
 
 .hotel__title:focus {
     outline: 3px solid #83B3D3;
-    border-radius: 10px;
+    border-radius: 5px;
+    outline-offset: 3px;
     color: #756257;
 }
 
