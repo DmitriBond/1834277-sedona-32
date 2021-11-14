@@ -498,8 +498,19 @@ p.appointment-description {
     width: 115px;
 }
 
+.developer-link::before {
+    content: "";
+    width: 154px;
+    height: 64px;
+    outline: 3px solid #83B3D3;
+    position: absolute;
+    transform: translate(-20px, -12px);
+    border-radius: 10px;
+    visibility: hidden;
+}
+
 .developer-logo {
-    padding-top: 6px;
+    padding-top: 4px;
 }
 
 .main-catalog {
@@ -1116,9 +1127,12 @@ ul.pagination {
     fill: #756257;
 }
 
+.developer-link:focus::before {
+    visibility: visible;
+}
+
 .developer-link:focus {
-    outline: 3px solid #83B3D3;
-    border-radius: 10px;
+    outline: none;
 }
 
 .developer-link:active {
