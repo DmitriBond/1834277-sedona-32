@@ -368,7 +368,7 @@ p.appointment-description {
 
 .mailing {
     background-image: url("../img/background-footer.jpg");
-    background-size: 100% auto;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     color: #FFFFFF;
     display: flex;
@@ -429,6 +429,7 @@ p.appointment-description {
     line-height: 144%;
     background-color: #F2F2F2;
     color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .mailing-catalog .mailing-form input {
@@ -441,6 +442,7 @@ p.appointment-description {
 
 .footer-index__container {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     width: 1200px;
     padding-top: 38px;
@@ -570,6 +572,7 @@ p.appointment-description {
 
 .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     list-style-type: none;
     margin: 0 0 45px 0;
@@ -632,8 +635,9 @@ p.appointment-description {
     color: #333333;
     background-color: #FFFFFF;
     display: flex;
+    flex-wrap: wrap;
     padding: 44px 72px 45px 71px;
-    justify-content: flex-start;
+    justify-content: flex-end;
     width: 1057px;
 }
 
@@ -815,9 +819,10 @@ p.appointment-description {
 
 .hotel {
     display: grid;
+    border-top: 1px solid #E6E6E6;
     min-height: 181px;
     grid-column: 2 / 3;
-    grid-template-rows: 31px min-content auto 37px 30px;
+    grid-template-rows: 31px min-content auto min-content 30px;
     grid-template-columns: 180px 37px 151px 8px 160px auto;
     background-image: url("../img/stars-4.svg");
     background-repeat: no-repeat;
@@ -845,6 +850,7 @@ p.appointment-description {
     background-image: url("../img/stars-2.svg");
     background-repeat: no-repeat;
     background-position: 956px 33px;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .hotel__image {
@@ -877,6 +883,15 @@ p.appointment-description {
     padding-bottom: 16px;
 }
 
+.button-more::after {
+    position: absolute;
+    content: "";
+    width: 1056px;
+    height: 1px;
+    background-color: #E6E6E6;
+    transform: translate(-600px, 65px);
+}
+
 .pagination {
     display: flex;
     margin: 0;
@@ -886,11 +901,13 @@ p.appointment-description {
 
 ul.pagination {
     margin-left: 72px;
+    max-width: 600px;
+    flex-wrap: wrap;
 }
 
 .pagination-container {
     display: flex;
-    margin-bottom: 89px;
+    margin-bottom: 80px;
 }
 
 .pagination-current {
@@ -898,17 +915,16 @@ ul.pagination {
     color: #000000;
 }
 
-.pagination__item:not(:last-child) {
+.pagination__item {
     margin-right: 8px;
+    max-width: 170px;
   }
-
-.pagination__item:last-child {
-    margin-right: 301px;
-}
 
 .hotel-summary {
     margin-right: 51px;
     margin-top: 14px;
+    margin-left: auto;
+    max-width: 240px;
 }
 
 .select-number {
@@ -926,6 +942,7 @@ ul.pagination {
     background-repeat: no-repeat;
     background-position: right 16px center;
     appearance: none;
+    margin-right: 72px;
 }
 
 .pagination__link {
@@ -938,6 +955,7 @@ ul.pagination {
     padding: 2px;
     text-decoration: none;
     border-radius: 4px;
+    margin-bottom: 5px;
 }
 
 .catalog-selection {
