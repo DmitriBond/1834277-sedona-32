@@ -31,6 +31,12 @@ body {
   background: #ffffff;
 }
 
+.header-main {
+  color: #000000;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   object-fit: contain;
@@ -158,6 +164,7 @@ img {
 }
 
 .main-logo {
+  position: relative;
   background-image: url("../img/index-background.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -167,15 +174,28 @@ img {
   margin-bottom: 10px;
 }
 
+.main-logo::after {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 1200px;
+  height: 57px;
+  background-image: url("../img/index-divider.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  content: "";
+}
+
 .advantages {
   text-align: center;
+  background-color: #ffffff;
 }
 
 .advantages__summary {
   margin: 0;
   font-size: 22px;
   line-height: 164%;
-  margin-bottom: 81px;
+  margin-bottom: 79px;
 }
 
 .advantages-headline {
@@ -332,7 +352,7 @@ h3.appointment-title {
 }
 
 .appointment-description {
-  margin-bottom: 57px;
+  margin-bottom: 61px;
   margin-top: 15px;
   text-align: center;
   font-size: 22px;
@@ -452,7 +472,7 @@ h3.appointment-title {
 }
 
 .mailing-catalog + .footer-index__container {
-  padding-top: 80px;
+  padding-top: 85px;
 }
 
 .socials {
@@ -821,6 +841,7 @@ h3.appointment-title {
   grid-template-columns: 180px 37px 151px 8px 160px auto;
   background-image: url("../img/stars-4.svg");
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .hotel:first-child {
@@ -885,7 +906,7 @@ h3.appointment-title {
   width: 1056px;
   height: 1px;
   background-color: #e6e6e6;
-  transform: translate(-600px, 65px);
+  transform: translate(-600px, 70px);
 }
 
 .pagination {
