@@ -31,6 +31,11 @@ body {
   background: #ffffff;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -326,9 +331,13 @@ h3.appointment-title {
   text-align: center;
 }
 
-p.appointment-description {
+.appointment-description {
   margin-bottom: 57px;
   margin-top: 15px;
+  text-align: center;
+  font-size: 22px;
+  line-height: 118%;
+  color: #333333;
 }
 
 .appointment {
@@ -337,13 +346,6 @@ p.appointment-description {
   justify-content: center;
   align-items: center;
   width: 1200px;
-}
-
-.appointment-description {
-  text-align: center;
-  font-size: 22px;
-  line-height: 118%;
-  color: #333333;
 }
 
 .button-submit {
@@ -369,6 +371,7 @@ p.appointment-description {
 
 .mailing {
   background-image: url("../img/background-footer.jpg");
+  background-color: #8aaaB9;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #ffffff;
@@ -435,7 +438,7 @@ p.appointment-description {
   z-index: 1;
 }
 
-.mailing-catalog .mailing-form input {
+.field-catalog {
   background-color: #f2f2f2;
 }
 
@@ -641,19 +644,6 @@ p.appointment-description {
   padding: 44px 72px 43px 71px;
   justify-content: flex-end;
   width: 1057px;
-}
-
-.sorting-form select {
-  padding: 10px 48px 15px 16px;
-  height: 48px;
-  width: 287px;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 129%;
-  box-sizing: border-box;
-  border: 2px solid #e6e6e6;
 }
 
 .hotel-number {
@@ -1574,6 +1564,8 @@ ul.pagination {
 }
 
 .select-control {
+  padding: 10px 48px 15px 16px;
+  height: 48px;
   width: 100%;
   border: 2px solid #e6e6e6;
   box-sizing: border-box;
@@ -1614,7 +1606,6 @@ ul.pagination {
   border-radius: 20px;
   display: none;
 }
-
 
 .popover-exist:hover .popover {
   display: block;
@@ -1817,7 +1808,6 @@ ul.pagination {
   fill-opacity: 0.3;
 }
 
-
 .modal-title {
   margin: 0;
   margin-bottom: 60px;
@@ -1930,7 +1920,6 @@ ul.pagination {
   visibility: hidden;
   border-radius: 4px;
 }
-
 
 .button-minus-icon {
   fill-opacity: 0.3;
@@ -2061,7 +2050,6 @@ ul.pagination {
   margin-top: -6px;
   margin-bottom: 5px;
 }
-
 
 .search-form-field {
   box-sizing: border-box;
