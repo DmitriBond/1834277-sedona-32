@@ -178,7 +178,7 @@ img {
   margin-bottom: 81px;
 }
 
-.advantages h2 {
+.advantages-headline {
   margin: 0;
   margin-bottom: 34px;
   font-size: 30px;
@@ -535,6 +535,7 @@ h3.appointment-title {
 
 .main-header {
   background-image: url("../img/catalog-background.jpg");
+  background-color: #303539;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   color: #ffffff;
