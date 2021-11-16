@@ -1737,8 +1737,8 @@ ul.pagination {
   display: flex;
   justify-content: space-between;
   text-decoration: none;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
 }
 
 .favourites-item-text {
